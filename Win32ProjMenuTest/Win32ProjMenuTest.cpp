@@ -153,14 +153,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_CREATE:
-		//hMenu = CreateMenu();
-		//AppendMenu(hMenu, MF_STRING, 100, TEXT("Apple"));
-		//AppendMenu(hMenu, MF_STRING, 101, TEXT("Orange"));
-		//hPopupMenu = CreatePopupMenu();
-		//AppendMenu(hPopupMenu, MF_STRING, 102, TEXT("Purple"));
-		//AppendMenu(hPopupMenu, MF_STRING, 103, TEXT("Red"));
-		//AppendMenu(hMenu, MF_STRING | MF_POPUP, (UINT_PTR)hPopupMenu, TEXT("Color"));
-		//SetMenu(hWnd, hMenu);
+		hMenu = CreateMenu();
+		AppendMenu(hMenu, MF_STRING, 100, TEXT("Apple"));
+		AppendMenu(hMenu, MF_STRING, 101, TEXT("Orange"));
+		hPopupMenu = CreatePopupMenu();
+		AppendMenu(hPopupMenu, MF_STRING, 102, TEXT("Purple"));
+		AppendMenu(hPopupMenu, MF_STRING, 103, TEXT("Red"));
+		AppendMenu(hMenu, MF_STRING | MF_POPUP, (UINT_PTR)hPopupMenu, TEXT("Color"));
+		SetMenu(hWnd, hMenu);
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
