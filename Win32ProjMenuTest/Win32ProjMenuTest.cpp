@@ -160,6 +160,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		hPopupMenu = CreatePopupMenu();
 		AppendMenu(hPopupMenu, MF_STRING, 102, TEXT("Purple"));
 		AppendMenu(hPopupMenu, MF_STRING, 103, TEXT("Red"));
+		AppendMenu(hPopupMenu, MF_STRING, 104, TEXT("Blue"));
 		AppendMenu(hMenu, MF_STRING | MF_POPUP, (UINT_PTR)hPopupMenu, TEXT("Color"));
 		SetMenu(hWnd, hMenu);
 		break;
